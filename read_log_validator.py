@@ -37,7 +37,7 @@ def create_tellraw_command(summon_cmd):
 
     tellraw_cmd = tellraw_cmd.replace("$",datetime.now().strftime("[%d.%m.%Y %H:%M:%S] "))
 
-    tellraw_cmd = replace_regex(tellraw_cmd, r'string::(.*?)(?=-{2}|")', '{{"text":"{}"}}')
+    tellraw_cmd = replace_regex(tellraw_cmd, r'string::(.*?)(?=-{2}|])', '{{"text":"{}"}}')
 
     tellraw_cmd = replace_regex(tellraw_cmd, r'score::(\w+),(\w+)', '{{"score":{{"name":"{}","objective":"{}"}}}}')
 
